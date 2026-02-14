@@ -1,0 +1,20 @@
+# --- Database ---
+# Ignore the actual binary database files
+*.db
+*.db-journal
+*.db-shm
+*.db-wal
+
+# --- .NET / C# ---
+# Ignore build artifacts
+[Bb]in/
+[Oo]bj/
+.vs/
+.vscode/
+*.user
+*.userosscache
+*.sln.doccache
+
+# --- Secrets ---
+# Don't upload your private keys or dev secrets
+appsettings.Development.json

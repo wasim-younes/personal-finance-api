@@ -1,0 +1,871 @@
+{
+  "info": {
+    "_postman_id": "45ee0105-4b86-49ae-8227-36c38c38759b",
+    "name": "ThePiAPI_Full_Test_Suite",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "21306144",
+    "_collection_link": "https://go.postman.co/collection/21306144-45ee0105-4b86-49ae-8227-36c38c38759b?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Acount",
+      "item": [
+        {
+          "name": "Create",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiI1IiwidW5pcXVlX25hbWUiOiJ3YXNpbTIiLCJuYmYiOjE3NzEwMzU5MzUsImV4cCI6MTc3MTY0MDczNSwiaWF0IjoxNzcxMDM1OTM1LCJpc3MiOiJGaW5hbmNlVHJhY2tlckFQSSIsImF1ZCI6IkZpbmFuY2VUcmFja2VyQ2xpZW50In0.x717KIXynd-rOAMIsflAfADb9Ajj0rXEKvndxZnbKGI",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\": \"Bank Card\",\r\n  \"type\": \"Checking\",\r\n  \"balance\": 1000.0,\r\n  \"currency\": \"BYN\",\r\n  \"color\": \"#10B981\",\r\n  \"icon\": \"credit-card\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/accounts/create",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "accounts",
+                "create"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "list",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiI1IiwidW5pcXVlX25hbWUiOiJ3YXNpbTIiLCJuYmYiOjE3NzEwMzY4NTYsImV4cCI6MTc3MTY0MTY1NiwiaWF0IjoxNzcxMDM2ODU2LCJpc3MiOiJGaW5hbmNlVHJhY2tlckFQSSIsImF1ZCI6IkZpbmFuY2VUcmFja2VyQ2xpZW50In0.bHLDjmJKh774cCwyOfjWNid00u4zAp9zvopg8DUxLck",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/accounts/list",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "accounts",
+                "list"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "reconcile",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiI1IiwidW5pcXVlX25hbWUiOiJ3YXNpbTIiLCJuYmYiOjE3NzEwMzk1NjAsImV4cCI6MTc3MTY0NDM2MCwiaWF0IjoxNzcxMDM5NTYwLCJpc3MiOiJGaW5hbmNlVHJhY2tlckFQSSIsImF1ZCI6IkZpbmFuY2VUcmFja2VyQ2xpZW50In0.fWovPHVtuWVjAMtl0pExHAmEbXKEUBk3n8DskjSzP6g",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"actualBalance\": 600.0\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/accounts/3/reconcile",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "accounts",
+                "3",
+                "reconcile"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "autht",
+      "item": [
+        {
+          "name": "Register",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "",
+                "value": "",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"username\": \"wasim2\",\r\n  \"email\": \"wasim@example2.com\",\r\n  \"password\": \"Password123!\",\r\n  \"fullName\": \"Wasim Younes\",\r\n  \"monthlyIncome\": 4500\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/auth/register",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "register"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Login",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"username\": \"wasim2\",\r\n  \"password\": \"Password123!\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/auth/login",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "login"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "budgets",
+      "item": [
+        {
+          "name": "create",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiI1IiwidW5pcXVlX25hbWUiOiJ3YXNpbTIiLCJuYmYiOjE3NzEwMzk1NjAsImV4cCI6MTc3MTY0NDM2MCwiaWF0IjoxNzcxMDM5NTYwLCJpc3MiOiJGaW5hbmNlVHJhY2tlckFQSSIsImF1ZCI6IkZpbmFuY2VUcmFja2VyQ2xpZW50In0.fWovPHVtuWVjAMtl0pExHAmEbXKEUBk3n8DskjSzP6g",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n\"categoryId\": 8,\r\n\"amount\": 100.0,\r\n\"period\": \"Monthly\",\r\n\"startDate\": \"2026-02-01\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/budgets/create",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "budgets",
+                "create"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "list",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiI1IiwidW5pcXVlX25hbWUiOiJ3YXNpbTIiLCJuYmYiOjE3NzEwMzk1NjAsImV4cCI6MTc3MTY0NDM2MCwiaWF0IjoxNzcxMDM5NTYwLCJpc3MiOiJGaW5hbmNlVHJhY2tlckFQSSIsImF1ZCI6IkZpbmFuY2VUcmFja2VyQ2xpZW50In0.fWovPHVtuWVjAMtl0pExHAmEbXKEUBk3n8DskjSzP6g",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n\"categoryId\": 8,\r\n\"amount\": 100.0,\r\n\"period\": \"Monthly\",\r\n\"startDate\": \"2026-02-01\"\r\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/budgets/list",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "budgets",
+                "list"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Categories",
+      "item": [
+        {
+          "name": "create",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiI1IiwidW5pcXVlX25hbWUiOiJ3YXNpbTIiLCJuYmYiOjE3NzEwMzk1NjAsImV4cCI6MTc3MTY0NDM2MCwiaWF0IjoxNzcxMDM5NTYwLCJpc3MiOiJGaW5hbmNlVHJhY2tlckFQSSIsImF1ZCI6IkZpbmFuY2VUcmFja2VyQ2xpZW50In0.fWovPHVtuWVjAMtl0pExHAmEbXKEUBk3n8DskjSzP6g",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n\"name\": \"Adjustments\",\r\n  \"icon\": \"sync\",\r\n  \"color\": \"#9E9E9E\",\r\n  \"type\": \"System\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/categories/create",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "categories",
+                "create"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "gett_stats",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiI1IiwidW5pcXVlX25hbWUiOiJ3YXNpbTIiLCJuYmYiOjE3NzEwMzk1NjAsImV4cCI6MTc3MTY0NDM2MCwiaWF0IjoxNzcxMDM5NTYwLCJpc3MiOiJGaW5hbmNlVHJhY2tlckFQSSIsImF1ZCI6IkZpbmFuY2VUcmFja2VyQ2xpZW50In0.fWovPHVtuWVjAMtl0pExHAmEbXKEUBk3n8DskjSzP6g",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/categories/stats",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "categories",
+                "stats"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Dashboard",
+      "item": [
+        {
+          "name": "Dashboard",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiI1IiwidW5pcXVlX25hbWUiOiJ3YXNpbTIiLCJuYmYiOjE3NzEwMzM5NDYsImV4cCI6MTc3MTYzODc0NiwiaWF0IjoxNzcxMDMzOTQ2LCJpc3MiOiJGaW5hbmNlVHJhY2tlckFQSSIsImF1ZCI6IkZpbmFuY2VUcmFja2VyQ2xpZW50In0.-ZW1D2XDOueNHzhb45gkxeU1zpxwU5VRa3VMd3isiI0",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/dashboard",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "dashboard"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Rent Bill",
+      "item": [
+        {
+          "name": "create",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiI1IiwidW5pcXVlX25hbWUiOiJ3YXNpbTIiLCJuYmYiOjE3NzEwMzM5NDYsImV4cCI6MTc3MTYzODc0NiwiaWF0IjoxNzcxMDMzOTQ2LCJpc3MiOiJGaW5hbmNlVHJhY2tlckFQSSIsImF1ZCI6IkZpbmFuY2VUcmFja2VyQ2xpZW50In0.-ZW1D2XDOueNHzhb45gkxeU1zpxwU5VRa3VMd3isiI0",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"description\": \"Apartment Rent\",\r\n  \"amount\": 800.0,\r\n  \"dueDate\": \"2026-03-01T00:00:00\",\r\n  \"categoryId\": 8\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/bills/create",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "bills",
+                "create"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Pay a Bill",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiI1IiwidW5pcXVlX25hbWUiOiJ3YXNpbTIiLCJuYmYiOjE3NzEwMzk1NjAsImV4cCI6MTc3MTY0NDM2MCwiaWF0IjoxNzcxMDM5NTYwLCJpc3MiOiJGaW5hbmNlVHJhY2tlckFQSSIsImF1ZCI6IkZpbmFuY2VUcmFja2VyQ2xpZW50In0.fWovPHVtuWVjAMtl0pExHAmEbXKEUBk3n8DskjSzP6g",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/bills/pay/1?accountId=4",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "bills",
+                "pay",
+                "1"
+              ],
+              "query": [
+                {
+                  "key": "accountId",
+                  "value": "4"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Skip a Bill",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiI1IiwidW5pcXVlX25hbWUiOiJ3YXNpbTIiLCJuYmYiOjE3NzEwMzk1NjAsImV4cCI6MTc3MTY0NDM2MCwiaWF0IjoxNzcxMDM5NTYwLCJpc3MiOiJGaW5hbmNlVHJhY2tlckFQSSIsImF1ZCI6IkZpbmFuY2VUcmFja2VyQ2xpZW50In0.fWovPHVtuWVjAMtl0pExHAmEbXKEUBk3n8DskjSzP6g",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/bills/skip/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "bills",
+                "skip",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Report",
+      "item": [
+        {
+          "name": "monthly-trends",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiI1IiwidW5pcXVlX25hbWUiOiJ3YXNpbTIiLCJuYmYiOjE3NzEwMzM5NDYsImV4cCI6MTc3MTYzODc0NiwiaWF0IjoxNzcxMDMzOTQ2LCJpc3MiOiJGaW5hbmNlVHJhY2tlckFQSSIsImF1ZCI6IkZpbmFuY2VUcmFja2VyQ2xpZW50In0.-ZW1D2XDOueNHzhb45gkxeU1zpxwU5VRa3VMd3isiI0",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/reports/monthly-trends",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "reports",
+                "monthly-trends"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Security",
+      "item": [
+        {
+          "name": "set-pin",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiI1IiwidW5pcXVlX25hbWUiOiJ3YXNpbTIiLCJuYmYiOjE3NzEwMzk1NjAsImV4cCI6MTc3MTY0NDM2MCwiaWF0IjoxNzcxMDM5NTYwLCJpc3MiOiJGaW5hbmNlVHJhY2tlckFQSSIsImF1ZCI6IkZpbmFuY2VUcmFja2VyQ2xpZW50In0.fWovPHVtuWVjAMtl0pExHAmEbXKEUBk3n8DskjSzP6g",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"pin\": \"1234\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/security/set-pin",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "security",
+                "set-pin"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "verify-pin",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiI1IiwidW5pcXVlX25hbWUiOiJ3YXNpbTIiLCJuYmYiOjE3NzEwMzk1NjAsImV4cCI6MTc3MTY0NDM2MCwiaWF0IjoxNzcxMDM5NTYwLCJpc3MiOiJGaW5hbmNlVHJhY2tlckFQSSIsImF1ZCI6IkZpbmFuY2VUcmFja2VyQ2xpZW50In0.fWovPHVtuWVjAMtl0pExHAmEbXKEUBk3n8DskjSzP6g",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"pin\": \"1234\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/security/verify-pin",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "security",
+                "verify-pin"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Transactions",
+      "item": [
+        {
+          "name": "Quick Add",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiI1IiwidW5pcXVlX25hbWUiOiJ3YXNpbTIiLCJuYmYiOjE3NzEwMzY4NTYsImV4cCI6MTc3MTY0MTY1NiwiaWF0IjoxNzcxMDM2ODU2LCJpc3MiOiJGaW5hbmNlVHJhY2tlckFQSSIsImF1ZCI6IkZpbmFuY2VUcmFja2VyQ2xpZW50In0.bHLDjmJKh774cCwyOfjWNid00u4zAp9zvopg8DUxLck",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"amount\": -5.50,\r\n  \"description\": \"Starbucks\",\r\n  \"categoryName\": \"Food & Drink\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/transactions/quick-add",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "transactions",
+                "quick-add"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Transactions",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiI1IiwidW5pcXVlX25hbWUiOiJ3YXNpbTIiLCJuYmYiOjE3NzEwMzY4NTYsImV4cCI6MTc3MTY0MTY1NiwiaWF0IjoxNzcxMDM2ODU2LCJpc3MiOiJGaW5hbmNlVHJhY2tlckFQSSIsImF1ZCI6IkZpbmFuY2VUcmFja2VyQ2xpZW50In0.bHLDjmJKh774cCwyOfjWNid00u4zAp9zvopg8DUxLck",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/transactions/list?Page=1&PageSize=10",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "transactions",
+                "list"
+              ],
+              "query": [
+                {
+                  "key": "Page",
+                  "value": "1",
+                  "type": "text"
+                },
+                {
+                  "key": "PageSize",
+                  "value": "10",
+                  "type": "text"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update_id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiI1IiwidW5pcXVlX25hbWUiOiJ3YXNpbTIiLCJuYmYiOjE3NzEwMzk1NjAsImV4cCI6MTc3MTY0NDM2MCwiaWF0IjoxNzcxMDM5NTYwLCJpc3MiOiJGaW5hbmNlVHJhY2tlckFQSSIsImF1ZCI6IkZpbmFuY2VUcmFja2VyQ2xpZW50In0.fWovPHVtuWVjAMtl0pExHAmEbXKEUBk3n8DskjSzP6g",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n\"accountId\": 3,\r\n  \"amount\": -15.5,\r\n  \"description\": \"Starbucks - Updated\",\r\n  \"categoryId\": 8,\r\n  \"transactionDate\": \"2026-02-14\", \r\n  \"notes\": \"Testing the update logic\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/transactions/update/5",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "transactions",
+                "update",
+                "5"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "DELETE",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiI1IiwidW5pcXVlX25hbWUiOiJ3YXNpbTIiLCJuYmYiOjE3NzEwMzk1NjAsImV4cCI6MTc3MTY0NDM2MCwiaWF0IjoxNzcxMDM5NTYwLCJpc3MiOiJGaW5hbmNlVHJhY2tlckFQSSIsImF1ZCI6IkZpbmFuY2VUcmFja2VyQ2xpZW50In0.fWovPHVtuWVjAMtl0pExHAmEbXKEUBk3n8DskjSzP6g",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/transactions/deletet/4",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "transactions",
+                "deletet",
+                "4"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "advancid Search",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiI1IiwidW5pcXVlX25hbWUiOiJ3YXNpbTIiLCJuYmYiOjE3NzEwMzk1NjAsImV4cCI6MTc3MTY0NDM2MCwiaWF0IjoxNzcxMDM5NTYwLCJpc3MiOiJGaW5hbmNlVHJhY2tlckFQSSIsImF1ZCI6IkZpbmFuY2VUcmFja2VyQ2xpZW50In0.fWovPHVtuWVjAMtl0pExHAmEbXKEUBk3n8DskjSzP6g",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/transactions/search?start=2026-01-01&end=2026-02-14",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "transactions",
+                "search"
+              ],
+              "query": [
+                {
+                  "key": "start",
+                  "value": "2026-01-01"
+                },
+                {
+                  "key": "end",
+                  "value": "2026-02-14"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "CSV Export",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiI1IiwidW5pcXVlX25hbWUiOiJ3YXNpbTIiLCJuYmYiOjE3NzEwMzk1NjAsImV4cCI6MTc3MTY0NDM2MCwiaWF0IjoxNzcxMDM5NTYwLCJpc3MiOiJGaW5hbmNlVHJhY2tlckFQSSIsImF1ZCI6IkZpbmFuY2VUcmFja2VyQ2xpZW50In0.fWovPHVtuWVjAMtl0pExHAmEbXKEUBk3n8DskjSzP6g",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/transactions/export",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "transactions",
+                "export"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Transfers",
+      "item": [
+        {
+          "name": "transfers",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiI1IiwidW5pcXVlX25hbWUiOiJ3YXNpbTIiLCJuYmYiOjE3NzEwMzM5NDYsImV4cCI6MTc3MTYzODc0NiwiaWF0IjoxNzcxMDMzOTQ2LCJpc3MiOiJGaW5hbmNlVHJhY2tlckFQSSIsImF1ZCI6IkZpbmFuY2VUcmFja2VyQ2xpZW50In0.-ZW1D2XDOueNHzhb45gkxeU1zpxwU5VRa3VMd3isiI0",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"fromAccountId\": 3,\r\n  \"toAccountId\": 4,\r\n  \"amount\": 999999.0\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/transfers",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "transfers"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
