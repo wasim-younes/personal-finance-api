@@ -14,7 +14,32 @@
 *.user
 *.userosscache
 *.sln.doccache
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+
+# --- Docker ---
+# Ignore the internal data Docker might create if you mount a volume
+.docker/
+# If you ever use a .env file for Docker secrets, ignore it!
+.env
 
 # --- Secrets ---
 # Don't upload your private keys or dev secrets
 appsettings.Development.json
+appsettings.Local.json
+# Client secrets file
+clientsecrets.json
+
+# --- OS Specific ---
+# Windows thumbnail cache
+Thumbs.db
+ehthumbs.db
+# Mac specific (in case a teammate uses a Mac)
+.DS_Store
+
+# --- User Secrets ---
+# .NET User Secrets folder
+secrets.json
